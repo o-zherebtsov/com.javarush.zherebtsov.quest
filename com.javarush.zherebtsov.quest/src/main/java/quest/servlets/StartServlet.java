@@ -27,6 +27,8 @@ public class StartServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setCharacterEncoding("UTF-8");
+
         String playerName = req.getParameter("playerName");
 
         HttpSession session = req.getSession();
